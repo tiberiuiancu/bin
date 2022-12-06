@@ -1,0 +1,10 @@
+set -e
+
+# build
+cd ~/.local/bin
+docker build -t buntu .
+cd -
+
+# run
+docker run -it --rm -v $(pwd):/mnt buntu
+
